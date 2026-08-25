@@ -9,7 +9,7 @@ bot = commands.Bot(command_prefix=commands.when_mentioned, intents=intents, help
 
 @bot.event
 async def on_ready():
-    print(f"Bot connecté en tant que {bot.user} (ID : {bot.user.id})")
+    print(f"Bot connecté en tant que {bot.user}.")
     try:
         synced = await bot.tree.sync()
         print(f"{len(synced)} commandes synchronisées")
